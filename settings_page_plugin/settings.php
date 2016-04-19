@@ -1,7 +1,7 @@
 <?php
 /*
 	Plugin Name: PK Settings Page Plugin
-	Description: Setting up configurable fields for our plugin.
+	Description: Setting up your own top-level settings page for your plugin.
 	Author: Cory Fischer
 	Version: 1.0.0
 */
@@ -16,7 +16,7 @@ class Settings_Page_Plugin {
 		$page_title = 'My Awesome Settings Page';
 		$menu_title = 'Awesome Plugin';
 		$capability = 'manage_options';
-		$slug = 'test_fields';
+		$slug = 'test_settings_page';
 		$callback = array( $this, 'plugin_settings_page_content' );
 		$icon = 'dashicons-admin-plugins';
 		$position = 2;
