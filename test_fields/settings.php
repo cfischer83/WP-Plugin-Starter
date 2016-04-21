@@ -67,12 +67,12 @@ class Test_Fields_Plugin {
 
 	public function setup_fields() {
 		add_settings_field( 'our_first_field', 'Field Name', array( $this, 'field_callback' ), 'pk_test_fields', 'our_first_section' );
+		register_setting( 'pk_test_fields', 'our_first_field' );
 	}
 
 	public function field_callback( $arguments ) {
 		echo '<input name="our_first_field" id="our_first_field" type="text" value="' . get_option( 'our_first_field' ) . '" />';
 		// Can't save without this. 'test_fields' is the $slug from your create_plugin_settings_page
-		register_setting( 'pk_test_fields', 'our_first_field' );
 	}
 
 	// White-lists options on custom pages.
